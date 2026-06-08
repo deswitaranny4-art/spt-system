@@ -1,0 +1,213 @@
+body {
+    font-family: "Outfit", sans-serif;
+}
+
+.card, .detail-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e4e8f0;
+    margin-bottom: 24px;
+}
+
+.card h3, .detail-card h3 {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;}
+
+.card label, .detail-card label {
+    font-size: 13px;
+    margin-top: 10px;
+    display: block;
+}
+
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.custom-dropdown input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: "Outfit", sans-serif;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background: #f0f0f0;
+}
+
+.card select,
+.card input,
+.detail-card select,
+.detail-card input {
+    width: 100%;
+    height: 36px;
+    margin-top: 5px;
+    padding: 0 10px;
+    border: 1px solid #d4d8e4;
+    border-radius: 8px;
+    font-size: 13px; /* 🔥 INI KUNCI */
+}
+
+.total-box {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: #1e2a45;
+}
+
+.detail-card button {
+    margin-top: 14px;
+    width: 100%;
+    height: 40px;
+    background: #2d5fde;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* =========================
+   POPUP
+========================= */
+
+/* Popup Overlay */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+}
+
+/* Popup Box */
+.popup-box {
+    width: 300px;
+    padding: 25px 30px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-box p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.popup-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2d5fde;
+    color: white;
+    cursor: pointer;
+}
+
+.popup-box button:hover {
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.topbar h1 {
+    color: #1a3a8f;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.menu-item > a {
+  background: none;
+  border-radius: 0;
+  padding: 12px 20px;
+  display: block;
+}
+
+.submenu {
+  display: none;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding-left: 40px;
+}
+
+.menu-item.active .submenu {
+    display: block !important;
+}
+
+/* GRID FORM */
+.form-grid {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 20px;
+}
+
+.section-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* setiap field */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* biar rapi */
+.form-group label {
+    margin-bottom: 5px;
+}   
+
+.detail-card hr {
+    margin: 20px 0;
+}

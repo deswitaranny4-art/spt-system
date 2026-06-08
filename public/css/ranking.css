@@ -1,0 +1,590 @@
+/* =========================
+   GLOBAL FONT
+========================= */
+
+body{
+    font-family: "Outfit", sans-serif;
+}
+
+/* INPUT & DROPDOWN */
+.filter-box input,
+.filter-box select,
+.dropdown input,
+input,
+select,
+button,
+textarea{
+    font-family: "Outfit", sans-serif;
+}
+
+/* OPTION */
+select,
+option{
+    font-family: "Outfit", sans-serif !important;
+}
+
+/* =========================
+   FILTER
+========================= */
+
+.filter-box{
+    display:flex;
+    gap:12px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.filter-box input,
+.filter-box select{
+    height:40px;
+    padding:0 12px;
+    border:1px solid #d4d8e4;
+    border-radius:8px;
+    font-size:14px;
+    min-width:180px;
+    box-sizing:border-box;
+}
+
+/* =========================
+   FILTER RANK
+========================= */
+
+.filter-rank{
+    margin-bottom:22px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.filter-rank label{
+    font-size:13px;
+    font-weight:600;
+    color:#374151;
+}
+
+.filter-rank select{
+    padding:10px 12px;
+    font-size:13px;
+    border-radius:12px;
+    border:1px solid #d1d5db;
+    background:#fff;
+    outline:none;
+    font-size:14px;
+    transition:0.2s;
+}
+
+.filter-rank select:focus{
+    border-color:#2d5fde;
+    box-shadow:0 0 0 3px rgba(45,95,222,0.15);
+}
+#supplierFilter{
+    min-width:180px;
+}
+/* =========================
+   RANKING TABLE
+========================= */
+
+#rankingTable{
+    width:100%;
+    border-collapse:collapse;
+
+    background:#fff;
+
+    border-radius:22px;
+    overflow:hidden;
+
+    border:1px solid #edf1f7;
+
+    box-shadow:
+    0 4px 14px rgba(0,0,0,0.06);
+     overflow:hidden;
+
+    box-shadow:
+    0 4px 14px rgba(0,0,0,0.06),
+    inset 0 1px 2px rgba(255,255,255,0.7);
+    
+}
+
+/* HEADER */
+#rankingTable thead{
+    background:linear-gradient(
+        135deg,
+        #0b2c6a,
+        #123d8d
+    );
+}
+#rankingTable th{
+    letter-spacing:0.3px;
+    border-right:1px solid rgba(255,255,255,0.08);
+}
+
+#rankingTable th:last-child{
+    border-right:none;
+}
+
+#rankingTable th{
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    padding:12px 8px;
+    text-align:center;
+
+    border-right:1px solid rgba(255,255,255,0.12);
+    border-bottom:1px solid rgba(255,255,255,0.12);
+}
+
+#rankingTable th:last-child{
+    border-right:none;
+}
+
+#rankingTable td{
+    padding:10px 8px;
+    text-align:center;
+    font-size:13px;
+
+    border-right:1px solid #edf1f7;
+    border-bottom:1px solid #edf1f7;
+
+    box-shadow:
+    inset -1px 0 0 rgba(255,255,255,0.7),
+    inset 0 -1px 0 rgba(255,255,255,0.7);
+
+    color:#374151;
+    background:#fff;
+}
+
+#rankingTable td:last-child{
+    border-right:none;
+}
+
+/* HOVER */
+#rankingTable tbody tr:hover td{
+    background:#f8fbff;
+    transition:0.2s;
+}
+
+/* TOP RANK */
+.rank-1 td{
+    background:#fff8e7 !important;
+    font-weight:700;
+}
+
+.rank-2 td{
+    background:#f5f7fa !important;
+    font-weight:700;
+}
+
+.rank-3 td{
+    background:#fff3eb !important;
+    font-weight:700;
+}
+
+/* =========================
+   APPROVAL STAMP
+========================= */
+
+.approved-stamp{
+    transform:rotate(-10deg);
+    opacity:0.8;
+}
+
+.approval-box{
+    margin-top:20px;
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.approve-btn{
+    background:#4da6ff;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.reject-btn{
+    background:#ff6b9d;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.approve-btn:hover,
+.reject-btn:hover{
+    opacity:0.85;
+}
+
+.stamp{
+    position:absolute;
+    top:40px;
+    right:20px;
+    font-size:32px;
+    font-weight:bold;
+    padding:10px 20px;
+    border:4px solid;
+    border-radius:12px;
+    transform:rotate(-20deg);
+    opacity:0.25;
+    pointer-events:none;
+    text-transform:uppercase;
+
+    display:none;
+}
+
+/* BLUE APPROVED */
+.stamp-approved{
+    color:#2d5fde;
+    border-color:#2d5fde;
+}
+
+/* RED REJECT */
+.stamp-reject{
+    color:#e53935;
+    border-color:#e53935;
+}
+
+/* =========================
+   REPORT
+========================= */
+
+.topbar h1{
+    color:#1a3a8f;
+}
+
+.report-header .supplier-name{
+    text-align:center;
+    font-size:18px;
+    font-weight:700;
+    margin-top:12px;
+    color:#02050c;
+    letter-spacing:0.5px;
+}
+
+.report-box{
+    background:#ffffff;
+    padding:24px;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    font-size:15px;
+}
+
+.report-box table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    table-layout:fixed;
+    font-size:13px;
+}
+
+.report-box th,
+.report-box td{
+    border:1px solid #e0e0e0;
+    padding:8px 10px;
+    text-align:center;
+    font-size:15px;
+}
+
+.summary-table th{
+    background:#1f3c88;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:0.5px;
+}
+
+.report-header{
+    text-align:center;
+    font-size:14px;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.report-box th[colspan="3"]{
+    background:#f1f5fb;
+    color:#1f3c88;
+    font-size:15px;
+    text-align:left;
+    padding-left:12px;
+}
+
+.report-box td:first-child{
+    text-align:left;
+    font-weight:600;
+    background:#fafafa;
+    width:110px;
+    font-size:15px;
+}
+
+.report-box td:nth-child(2){
+    width:90px;
+    color:#555;
+    font-size:15px;
+}
+
+.report-box tr:nth-child(even) td{
+    background:#fcfcfc;
+}
+
+.report-box tr:hover td{
+    background:#eef4ff;
+    transition:0.2s;
+}
+
+.report-box td:last-child{
+    font-weight:bold;
+    font-size:15px;
+}
+
+/* =========================
+   APPROVAL SECTION
+========================= */
+
+.approval-section{
+    display:flex;
+    justify-content:space-between;
+    margin-top:40px;
+    font-size:14px;
+}
+
+.approval-left,
+.approval-right{
+    text-align:left;
+}
+
+/* =========================
+   MENU
+========================= */
+
+ul{
+    list-style:none;
+    padding-left:0;
+    margin:0;
+}
+
+.menu-item > a{
+    background:none;
+    border-radius:0;
+    padding:12px 20px;
+    display:block;
+}
+
+.submenu{
+    display:none;
+}
+
+.menu-item.active .submenu{
+    display:block !important;
+}
+
+.submenu li a{
+    padding-left:40px;
+}
+
+/* =========================
+   PRINT BUTTON
+========================= */
+
+.print-wrapper{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:20px;
+}
+
+.btn-print-report{
+    background:linear-gradient(
+        135deg,
+        #1a3a8f,
+        #2d5fde
+    );
+
+    color:white;
+
+    border:none;
+
+    padding:10px 24px;
+
+    border-radius:8px;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    transition:all 0.2s;
+}
+
+.btn-print-report:hover{
+    opacity:0.9;
+    transform:translateY(-1px);
+}
+
+/* =========================
+   PRINT
+========================= */
+
+@media print{
+
+    .approval-section{
+        display:flex;
+    }
+
+    .approval-left,
+    .approval-right{
+        font-size:14px;
+    }
+
+    .stamp{
+        display:inline-block;
+
+        margin-top:10px;
+
+        padding:6px 14px;
+
+        border:2px solid #000;
+
+        font-weight:bold;
+
+        transform:rotate(-10deg);
+
+        opacity:0.8;
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    #rankingTable{
+        font-size:13px;
+    }
+
+    #rankingTable th,
+    #rankingTable td{
+        padding:12px 10px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .filter-rank{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .filter-rank select{
+        width:100%;
+    }
+
+    #rankingTable{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+/* =========================
+   RANK BADGE
+========================= */
+
+/* =========================
+   RANK NUMBER
+========================= */
+
+.rank-number{
+    font-size:15px;
+    font-weight:800;
+    text-align:center;
+    letter-spacing:0.3px;
+}
+
+/* TOP 1 */
+.rank-number.rank-1{
+    color:#f7b500;
+    text-shadow:
+    0 1px 4px rgba(247,181,0,0.35);
+}
+
+/* TOP 2 */
+.rank-number.rank-2{
+    color:#94a3b8;
+    text-shadow:
+    0 1px 4px rgba(148,163,184,0.35);
+}
+
+/* TOP 3 */
+.rank-number.rank-3{
+    color:#cd7f32;
+    text-shadow:
+    0 1px 4px rgba(205,127,50,0.35);
+}
+
+/* =========================
+   SUPPLIER NAME
+========================= */
+
+.supplier-name{
+    font-weight:700;
+    color:#111827;
+}
+
+/* =========================
+   SCORE BOX
+========================= */
+
+.score-box{
+
+    background:none;
+
+    font-size:15px;
+
+    font-weight:900;
+
+    color:#1e3a8a;
+
+    text-shadow:
+    0 1px 3px rgba(0,0,0,0.12);
+
+    letter-spacing:0.4px;
+}
+
+/* =========================
+   RATING COLOR
+========================= */
+
+.grade{
+    font-weight:700;
+    font-size:14px;
+}
+
+/* A */
+.grade-A{
+    color:#16a34a;
+}
+
+/* B */
+.grade-B{
+    color:#2563eb;
+}
+
+/* C */
+.grade-C{
+    color:#d97706;
+}
+
+/* D */
+.grade-D{
+    color:#dc2626;
+}

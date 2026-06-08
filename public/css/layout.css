@@ -1,0 +1,502 @@
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --header-height:90px;
+    --sidebar-width:250px;
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+
+body{
+    margin:0;
+    font-family:'Outfit',sans-serif;
+    background:#f5f7fa;
+    color:#1e2a45;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    margin-left:var(--sidebar-width);
+
+    width:calc(100% - var(--sidebar-width));
+
+    height:var(--header-height);
+
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    box-sizing:border-box;
+
+    background:#ffffff;
+
+    border-bottom:1px solid #e5e7eb;
+
+    z-index:1000;
+
+    transition:.3s;
+}
+
+.title{
+    font-size:16px;
+    font-weight:600;
+    color:#374151;
+}
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+/* =========================================================
+   PROFILE + LOGOUT WRAPPER
+========================================================= */
+
+.profile-wrapper,
+.logout-wrapper{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+/* =========================================================
+   TRIGGER
+========================================================= */
+
+.welcome-text{
+    font-size:15px;
+    font-weight:500;
+    color:#374151;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.welcome-text:hover{
+    color:#111827;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.menu-btn,
+.logout-btn{
+
+    width:38px;
+    height:38px;
+
+    border:none;
+    outline:none;
+
+    background:none;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    border-radius:10px;
+
+    transition:.2s;
+
+    color:#1f2937;
+}
+
+.menu-btn:hover,
+.logout-btn:hover{
+    background:#f3f4f6;
+}
+
+.menu-btn i,
+.logout-btn i{
+    font-size:18px;
+}
+
+/* =========================================================
+   SHARED POPUP STYLE
+========================================================= */
+
+.profile-popup,
+.logout-popup{
+
+    position:absolute;
+
+    top:48px;
+    right:0;
+
+    width:250px;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    border:1px solid #e5e7eb;
+
+    padding:18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.10);
+
+    z-index:999;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(10px);
+
+    pointer-events:none;
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease,
+        visibility .2s;
+}
+
+/* =========================================================
+   SHOW POPUP
+========================================================= */
+
+.profile-wrapper:hover .profile-popup,
+.logout-wrapper:hover .logout-popup,
+
+.profile-popup.show,
+.logout-popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+}
+
+/* =========================================================
+   PROFILE POPUP
+========================================================= */
+
+.profile-name{
+    font-size:16px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:16px;
+}
+
+.profile-detail{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:12px;
+
+    font-size:14px;
+}
+
+.profile-detail:last-child{
+    margin-bottom:0;
+}
+
+.profile-detail span{
+    color:#6b7280;
+}
+
+.profile-detail b{
+    color:#111827;
+    font-weight:600;
+}
+
+/* =========================================================
+   MANAGE USER LINK
+========================================================= */
+
+.manage-user-link{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    margin-top:16px;
+
+    padding:10px 12px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    color:#111827;
+
+    font-size:14px;
+    font-weight:500;
+
+    transition:.2s;
+}
+
+.manage-user-link:hover{
+    background:#f3f4f6;
+}
+
+/* =========================================================
+   LOGOUT POPUP
+========================================================= */
+
+.logout-text{
+
+    font-size:14px;
+    font-weight:500;
+
+    text-align:center;
+
+    color:#111827;
+
+    margin-bottom:16px;
+}
+
+.logout-actions{
+    display:flex;
+    gap:10px;
+}
+
+.logout-actions button{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:10px 12px;
+
+    font-size:13px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+/* YES BUTTON */
+
+.logout-actions .yes{
+    background:#ef4444;
+    color:white;
+}
+
+.logout-actions .yes:hover{
+    opacity:.9;
+}
+
+/* NO BUTTON */
+
+.logout-actions .no{
+    background:#f3f4f6;
+    color:#111827;
+}
+
+.logout-actions .no:hover{
+    background:#e5e7eb;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.container{
+    margin-top:var(--header-height);
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:var(--sidebar-width);
+
+    height:100vh;
+
+    background:#fff;
+
+    padding:20px;
+
+    box-sizing:border-box;
+
+    border-right:1px solid #e5e9f2;
+
+    box-shadow:
+        2px 0 8px rgba(0,0,0,0.05);
+
+    z-index:2000;
+
+    transition:transform .3s ease;
+}
+
+/* HIDE */
+
+.sidebar.hide{
+    transform:translateX(-100%);
+}
+
+/* =========================================================
+   SIDEBAR LOGO
+========================================================= */
+
+.sidebar-logo{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding-bottom:18px;
+
+    margin-bottom:18px;
+
+    border-bottom:1px solid #e5e9f2;
+}
+
+.sidebar-logo img{
+    max-width:120px;
+    height:auto;
+}
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.sidebar a{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:11px 14px;
+
+    margin-bottom:8px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    color:#374151;
+
+    font-size:14px;
+    font-weight:500;
+
+    transition:.2s;
+}
+
+.sidebar a i{
+    width:18px;
+    text-align:center;
+}
+
+/* HOVER */
+
+.sidebar a:hover{
+    background:#eef2ff;
+    color:#1d4ed8;
+}
+
+/* ACTIVE */
+
+.sidebar a.active{
+    background:#dfe5f5;
+    color:#1a3a8f;
+    font-weight:600;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider{
+    height:1px;
+    background:#e5e7eb;
+    margin:16px 0;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content{
+
+    margin-left:var(--sidebar-width);
+
+    width:calc(100% - var(--sidebar-width));
+
+    padding:25px;
+
+    box-sizing:border-box;
+
+    transition:.3s;
+}
+
+/* =========================================================
+   FULL MODE
+========================================================= */
+
+.content.full{
+    margin-left:0;
+    width:100%;
+}
+
+header.full{
+    margin-left:0;
+    width:100%;
+    left:0;
+}
+
+/* =========================================================
+   SUBMENU
+========================================================= */
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.menu-item > a{
+    display:flex;
+}
+
+.submenu{
+    display:none;
+}
+
+.menu-item.active .submenu{
+    display:block;
+}
+
+.submenu li a{
+    padding-left:42px;
+}

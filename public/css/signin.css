@@ -1,0 +1,325 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Outfit', sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    background:#f4f7fb;
+    overflow:hidden;
+}
+
+.login-wrapper{
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+/* LEFT */
+
+.left-panel{
+    width:35%;
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.login-card{
+    width:100%;
+    max-width:360px;
+}
+
+.brand{
+    font-size:14px;
+    font-weight:600;
+    color:#2d5fde;
+    margin-bottom:15px;
+}
+
+.login-card h1{
+    font-size:40px;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.subtitle{
+    color:#6b7280;
+    margin-bottom:35px;
+    font-size:15px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#374151;
+}
+
+.input-box{
+    position:relative;
+}
+
+.input-box i{
+    position:absolute;
+    left:14px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#9ca3af;
+}
+
+.input-box input{
+    width:100%;
+    height:50px;
+
+    border:1px solid #d1d5db;
+    border-radius:12px;
+
+    padding:0 45px;
+
+    font-size:14px;
+    outline:none;
+
+    transition:0.2s;
+}
+
+.input-box input:focus{
+    border-color:#2d5fde;
+}
+
+.show-btn{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+
+    border:none;
+    background:none;
+
+    cursor:pointer;
+
+    color:#6b7280;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:25px;
+}
+
+.remember{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    font-size:14px;
+    color:#4b5563;
+}
+
+.forgot-btn{
+    border:none;
+    background:none;
+
+    color:#2d5fde;
+    font-size:14px;
+
+    cursor:pointer;
+}
+
+.login-btn{
+    width:100%;
+    height:50px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#2d5fde;
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+.login-btn:hover{
+    background:#1f47af;
+}
+
+.footer-text{
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#9ca3af;
+    font-size:13px;
+}
+
+/* RIGHT */
+
+.right-panel{
+    width:65%;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.bg-image{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:rgba(20,40,100,0.55);
+
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+    color:white;
+
+    padding:20px;
+}
+
+.hero-title{
+    font-size:50px;
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+.hero-subtitle{
+    font-size:20px;
+    opacity:0.9;
+}
+
+/* POPUP */
+
+.popup{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.4);
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+.popup-box{
+    width:320px;
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+}
+
+.popup-icon{
+    font-size:40px;
+    color:#f59e0b;
+
+    margin-bottom:15px;
+}
+
+.popup-text{
+    font-size:15px;
+    color:#374151;
+
+    margin-bottom:25px;
+}
+
+.popup-box button{
+    width:100%;
+    height:45px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#2d5fde;
+    color:white;
+
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .login-wrapper{
+        flex-direction:column;
+    }
+
+    .left-panel,
+    .right-panel{
+        width:100%;
+    }
+
+    .left-panel{
+        height:60%;
+    }
+
+    .right-panel{
+        height:40%;
+    }
+
+    .hero-title{
+        font-size:30px;
+    }
+}
+
+.options-row{
+    text-align:center;
+    margin-top:18px;
+}
+
+.forgot-link{
+    font-size:13px;
+    text-decoration:none;
+    color:#6b7280;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.forgot-link:hover{
+    color:#2d5fde;
+}

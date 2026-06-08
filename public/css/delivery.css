@@ -1,0 +1,558 @@
+/* =========================================================
+   BASE
+========================================================= */
+
+body {
+    font-family: "Outfit", sans-serif;
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+.pagination {
+    margin-top: 12px;
+    display: flex;
+    gap: 6px;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 6px 10px;
+    border: 1px solid #d4d8e4;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: "Outfit", sans-serif;
+}
+
+.pagination button.active-page {
+    background: #2d5fde;
+    color: white;
+    border-color: #2d5fde;
+}
+
+.table-footer{
+    margin-top:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+
+.show-entries{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-family:"Outfit",sans-serif;
+}
+
+.show-entries select{
+    padding:5px 8px;
+    border:1px solid #d4d8e4;
+    border-radius:6px;
+    font-family:"Outfit",sans-serif;
+}
+
+.pagination{
+    margin-top:0 !important;
+}
+
+/* =========================================================
+   SECTION DIVIDER
+========================================================= */
+
+.section-divider{
+    margin: 26px 0 18px;
+    border-top: 1px solid #e5e9f2;
+}
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.form-card {
+    background: white;
+    border: 1px solid #e4e8f0;
+    border-radius: 14px;
+
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.form-card .section-title {
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+/* =========================================================
+   GRID LAYOUT
+========================================================= */
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-full {
+    grid-column: 1 / -1;
+}
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+.field label {
+    font-size: 13px;
+}
+
+.field label span {
+    font-size: 12px;
+}
+
+.field input,
+.field select {
+    height: 36px;
+
+    padding: 0 12px;
+
+    font-size: 13px;
+    font-family: "Outfit", sans-serif;
+
+    border: 1px solid #d4d8e4;
+    border-radius: 8px;
+
+    background: #fafbfd;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: none;
+
+    border-color: #2d5fde;
+    background: #fff;
+
+    box-shadow: 0 0 0 2px rgba(45, 95, 222, 0.1);
+}
+
+/* Dropdown / Filter */
+.filter-box input,
+.filter-box select,
+.dropdown input,
+select,
+option {
+    font-family: "Outfit", sans-serif !important;
+}
+
+/* =========================================================
+   SCORE CARD
+========================================================= */
+
+.score-card {
+    background: white;
+
+    border: 1px solid #e4e8f0;
+    border-radius: 14px;
+
+    padding: 20px 24px;
+    margin-bottom: 28px;
+}
+
+.score-card .section-title {
+    margin-bottom: 14px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.section-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Section Title inside Grid */
+.grid2 .section-title {
+    grid-column: 1 / -1;
+
+    margin-top: 25px;
+    padding-top: 15px;
+
+    border-top: 2px solid #dfe5f2;
+}
+
+/* =========================================================
+   SCORE ROWS
+========================================================= */
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #f0f2f8;
+
+    font-size: 13px;
+}
+
+.score-row:last-child {
+    border-bottom: none;
+}
+
+.score-label {
+    color: #4a5568;
+}
+
+.score-val {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2d5fde;
+}
+
+/* =========================================================
+   TOTAL SCORE
+========================================================= */
+
+.total-box {
+    grid-column: 1 / -1;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5px;
+    padding: 10px 0;
+}
+
+/* Left Label */
+.total-box::before {
+    content: attr(data-label);
+
+    position: absolute;
+    left: 0;
+
+    font-size: 13px;
+    color: #8896ab;
+}
+
+/* Total Value */
+.total-num {
+    font-size: 34px;
+    font-weight: 800;
+    color: #1e2a45;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.badge-ok {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.badge-info {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-warn {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.btn-save {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    height: 42px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #1a3a8f, #2d5fde);
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-save:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.save-msg {
+    display: none;
+
+    margin-top: 12px;
+
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+
+    color: #065f46;
+}
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+/* Popup Overlay */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    z-index: 2000;
+}
+
+/* Popup Box */
+.popup-box {
+    width: 300px;
+
+    padding: 25px 30px;
+
+    background: white;
+    border-radius: 12px;
+
+    text-align: center;
+    font-size: 14px;
+
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-box p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.popup-box button {
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2d5fde;
+    color: white;
+
+    cursor: pointer;
+}
+
+.popup-box button:hover {
+    opacity: 0.9;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar h1 {
+    color: #1a3a8f;
+}
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.menu-item > a {
+    display: block;
+
+    padding: 12px 20px;
+
+    background: none;
+    border-radius: 0;
+}
+
+.submenu {
+    display: none;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.menu-item.active .submenu {
+    display: block !important;
+}
+
+.submenu li a {
+    padding-left: 40px;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.error {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 12px;
+    color: #e74c3c;
+}
+
+ /* =========================================================
+   SEARCHABLE DROPDOWN
+========================================================= */
+
+.dropdown{
+    position: relative;
+    width: 100%;
+}
+
+.dropdown input{
+    width: 100%;
+    height: 36px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d4d8e4;
+    border-radius: 8px;
+
+    background: #fafbfd;
+
+    font-size: 13px;
+    font-family: "Outfit", sans-serif;
+
+    box-sizing: border-box;
+}
+
+.dropdown input:focus{
+    outline: none;
+
+    border-color: #2d5fde;
+    background: #fff;
+
+    box-shadow: 0 0 0 2px rgba(45, 95, 222, 0.1);
+}
+
+.dropdown-list{
+    position: absolute;
+    top: 42px;
+    left: 0;
+
+    width: 100%;
+    max-height: 260px;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border: 1px solid #d4d8e4;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+    display: none;
+
+    z-index: 999;
+}
+
+.dropdown-list div{
+    padding: 10px 12px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+.dropdown-list div:hover{
+    background: #f4f7ff;
+    color: #2d5fde;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 18px 16px;
+    }
+
+    .total-num {
+        font-size: 38px;
+    }
+}
